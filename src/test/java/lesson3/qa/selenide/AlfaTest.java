@@ -21,7 +21,7 @@ public class AlfaTest {
     }
 
     @Test
-    void InsuranceSizeTest() {
+    void InsuranceTest() {
         open("https://alfabank.ru/make-money/");
 
         $(byText("Страхование вкладов")).parent().click();
