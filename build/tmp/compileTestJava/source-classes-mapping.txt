@@ -1,2 +1,2 @@
-lesson3/qa/selenide/AlfaTest.java
- lesson3.qa.selenide.AlfaTest
+AlfaTest.java
+ AlfaTest

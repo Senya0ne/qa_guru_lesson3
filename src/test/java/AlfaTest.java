@@ -1,5 +1,3 @@
-package lesson3.qa.selenide;
-
 import com.codeborne.selenide.CollectionCondition;
 import org.junit.jupiter.api.Test;
 
