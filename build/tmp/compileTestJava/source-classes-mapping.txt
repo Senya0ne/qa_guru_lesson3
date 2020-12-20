@@ -1,2 +1,0 @@
-AlfaTest.java
- AlfaTest
