@@ -1,4 +1,5 @@
 import com.codeborne.selenide.CollectionCondition;
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class AlfaTest {
     @Test
     void archiveDepositsSizeTest() {
+        Configuration.startMaximized=true;
         open("https://alfabank.ru/make-money/");
 
         $$(byText("Депозиты")).find(visible).parent().click();
@@ -20,6 +22,7 @@ public class AlfaTest {
 
     @Test
     void InsuranceTest() {
+        Configuration.startMaximized=true;
         open("https://alfabank.ru/make-money/");
 
         $(".c2C7LVl").sibling(0).click();
@@ -27,5 +30,7 @@ public class AlfaTest {
         $x("//*[@data-test-id='accordion-header-1']").shouldHave(text("Федеральный закон от 23.12.2003 N 177-ФЗ «О страховании вкладов физических лиц в банках Российской Федерации»")).click();
         $x("//*[@data-test-id='accordion-header-2']").shouldHave(text("Страхованию подлежат")).click();
         $x("//*[@data-test-id='accordion-header-3']").shouldHave(text("Как происходит возмещение средств?")).click();
+        $("#good-to-know [data-test-id=tabs-list-tabTitle-1] span").closest("button").click();
+        $("[data-test-id=tabs-list-tabTitle-0]").shouldHave(text("Описание"));
     }
 }
