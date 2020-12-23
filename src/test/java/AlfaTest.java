@@ -14,7 +14,7 @@ public class AlfaTest {
 
         $$(byText("Депозиты")).find(visible).parent().click();
         $$x("//*[@data-test-id='button']").find(text("Архивные счета и депозиты")).click();
-        $$(byText("Депозиты")).find(visible).parent().click();
+        $x("//*[@data-test-id='tabs-list-tabTitle-2']").preceding(0).click();
         $$x("//*[@data-widget-name='CatalogCard']").shouldHave(CollectionCondition.size(5));
     }
 
@@ -22,7 +22,7 @@ public class AlfaTest {
     void InsuranceTest() {
         open("https://alfabank.ru/make-money/");
 
-        $(byText("Страхование вкладов")).parent().click();
+        $(".c2C7LVl").sibling(0).click();
         $x("//*[@data-test-id='accordion-header-0']").shouldHave(text("Альфа-Банк является участником системы обязательного страхования вкладов")).click();
         $x("//*[@data-test-id='accordion-header-1']").shouldHave(text("Федеральный закон от 23.12.2003 N 177-ФЗ «О страховании вкладов физических лиц в банках Российской Федерации»")).click();
         $x("//*[@data-test-id='accordion-header-2']").shouldHave(text("Страхованию подлежат")).click();
